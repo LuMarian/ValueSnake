@@ -12,7 +12,7 @@ After you set up the files, when you hit a shot, it will be transferred to the V
 
 Generally, the files here on ValueSnake do 3 things:
 
-•	Improve on misreads by the SkyTrak+, meaning that stupidly out of range values for launch or speed, that happen on those accidental triggers occasionally, will be discarded: > 70° Launch, < 3 mph Ballspeed and Spin < 400 rpm.
+•	Improve on ghost reads by the SkyTrak+, meaning that stupidly out of range values for launch or speed, that happen on those accidental triggers occasionally, will be discarded: > 70° Launch, < 3 mph Ballspeed and Spin < 400 rpm.
 
 •	Send the shot data to localhost:8080/wurstbrot (sorry to vegans…) instead of OpenAPI directly. The last thing I fixed was that the SkyTrak Range will not register short ship shots, so I had to either “Force Monitor Arm” or “Force Normal Mode” within the OpenSkyPlus Windon in SkyTrak. That is now fixed as there is an automatic 10 second Re-Arm timer after every registered shot. It worked fine for me when I tested.
 
