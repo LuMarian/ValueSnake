@@ -1,5 +1,7 @@
 ## What is ValueSnake
 
+First of all, I am just a Data guy, not a Dev, so I am not in the software security dependencies or whatever business. So I have no clue if there is anything in the background of these apps that might become vulnerable in the future. It will not be regularly maintained, not do I take any responsibility for any issues that might arise in the future. Just to be sure... :)
+
 These applications or plugins are designed as a simple extension/improvement for the current use with [OpenSkyPlus](https://github.com/OpenSkyPlus/OpenSkyPlus) (1.1.1) and the [Springbok (MLM2PRO) Connector](https://github.com/springbok/MLM2PRO-GSPro-Connector) (1.10.16) for Using a separate Putting method (like ExPutt) in GSPro.
 The name comes from a quick first draft random name “ValueKing”, that my brother made in C# and my implementation in the easiest way possible – python – hence “Snake”.
 I have built upon the OpenSkyPlus Framework and simply modified the code slightly for it to work. I don’t want to repost the whole project, nor do I want to start a pull request as this feature is very specific to people using Springbok, so I am only posting the updated .dll files. Regarding ValueSnake, I have shared the source code which is really not that impressive and on which I will be very happy to take improvements for.
@@ -10,7 +12,7 @@ Generally, the files here on ValueSnake do 3 things:
 
 •	Improve on misreads by the SkyTrak+, meaning that stupidly out of range values for launch or speed, that happen on those accidental triggers occasionally, will be discarded: > 70° Launch, < 3 mph Ballspeed and Spin < 400 rpm.
 
-•	Send the shot data to localhost:8080/wurstbrot (sorry to vegans…) instead of OpenAPI directly. Occasionally the SkyTrak Range will not register short ship shots, so you will have to either “Force Monitor Arm” or “Force Normal Mode” within the OpenSkyPlus Windon in SkyTrak. This is a known issue and will be addressed in case there are future iterations. For now, I didn’t feel it was that annoying, I rather want to have a working putting mechanism.
+•	Send the shot data to localhost:8080/wurstbrot (sorry to vegans…) instead of OpenAPI directly. The last thing I fixed was that the SkyTrak Range will not register short ship shots, so I had to either “Force Monitor Arm” or “Force Normal Mode” within the OpenSkyPlus Windon in SkyTrak. That is now fixed as there is an automatic 10 second Re-Arm timer after every registered shot. It worked fine for me when I tested.
 
 •	Receive the shot data in the “ValueSnake” application and display them without delay in a way that can be read by the Springbok Connector.
 Please note that the Auto Switch to PuttingMode is not working with this setup, your putting will happen somewhere else anyway and if you ever need a super shot chip shot, just “Force Putting Mode” in the OpenSkyPlus window. This could be fixed in a future version but for that I would also need to touch the MLM2PRO connector code and I’m not sure that’s going to be a thing.
