@@ -20,6 +20,9 @@ Generally, the files here on ValueSnake do 3 things:
 Please note that the Auto Switch to PuttingMode is not working with this setup, your putting will happen somewhere else anyway and if you ever need a super shot chip shot, just “Force Putting Mode” in the OpenSkyPlus window. This could be fixed in a future version but for that I would also need to touch the MLM2PRO connector code and I’m not sure that’s going to be a thing.
 
 ## HowTo
+
+Download The OpenSkyPlus folder to modify the files inside of your plugins. Download ValueSnake as application for Springbok Screen Capture.
+
 A possible example for a setup is the “original” OpenSkyPlus together with SkyTrak 4.4.7. Rename (SkyTrak447) and zip this folder and Install another SkyTrak 4.x version, for example SkyTrak 4.4.2. Rename this to SkyTrak442, Unzip SkyTrak447 and you now have two versions of SkyTrak installed. Inside of SkyTrak442, you use the same OpenSkyPlus as in SkyTrak447, but replace the .dll files inside of the existing BepInEx subfolders with the ones from here. Make sure you put the OpenSkyPlus one and GSPro4OSP in the respective folders.
 From there, you download Springbok (the MLM2PRO) Connector as linked at the top and when setting up your device, make sure you call the window to screen capture “ValueSnake”. Apart from that just set it up as described in their instructional videos and voilà:
 
