@@ -8,6 +8,8 @@ I have built upon the OpenSkyPlus Framework and simply modified the code slightl
 
 ## What does it do?
 
+After you set up the files, when you hit a shot, it will be transferred to the ValueSnake window, where it can be read by Springbok. Before the first shot, the ValueSnake window will be black, so no worries :)
+
 Generally, the files here on ValueSnake do 3 things:
 
 •	Improve on misreads by the SkyTrak+, meaning that stupidly out of range values for launch or speed, that happen on those accidental triggers occasionally, will be discarded: > 70° Launch, < 3 mph Ballspeed and Spin < 400 rpm.
